@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pr&aacute;ctica</title>
+</head>
+<style>      
+    body {
+        margin:0;
+        background-color: rgb(141, 99, 224);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .header{
+        width: 100%;
+        height: 50px;
+        background-color: rgb(141, 99, 224);
+        display: flex;
+        justify-content: space-between;
+        
+        
+    }
+    .header__img{
+        
+        height: 60%;
+        margin: 15px 10px;
+
+        
+    }
+    .header__menu{
+        margin:0 30px;
+    }
+
+    .header__menu ul{
+        display: none;
+        list-style: none;
+        padding: 0;
+        position: absolute;
+        width: 130px;
+        text-align: right;
+        margin: 0 0 0 -35px;
+    }
+    .header__menu:hover ul,ul:hover{
+        display: block;
+    }
+
+    .header__menu li{
+        margin: 10px 10px;
+    }
+
+    .header__menu li a{
+        color: white;
+        text-decoration: none;
+    }
+
+    .header__menu li a:hover{
+        text-decoration: underline;
+    }
+
+
+    .header__menu--profile{
+        margin: 0 8px;
+        display: flex;
+        align-items: center;
+    }
+    .header__menu--profile img
+    {
+        width: 70%;
+        height: 30%;
+        margin: 5px 5px 0 0;
+    }
+    .header__menu--profile p{
+        color:white;
+        
+    }
+
+    .main{
+        height: 100px;
+        text-align: center;
+    }
+    .main__title{
+        color:white;
+        font-size: 25px;
+    }
+    .input{
+        border-radius: 27px;
+        border:2px solid whitesmoke;
+        color: white;
+        width: 70%;
+        height: 40px;
+        padding: 0 20px;
+        background-color: rgb(255, 255,255, 0.1);
+        outline: none;
+        font-size: 16px;
+    }
+
+
+    ::placeholder{
+        color: white;
+        font-size: 16px;
+    }
+    
+    .carousel{
+        width: 100%;
+        overflow: hidden;
+        padding: 50px;
+        position: relative;
+    }
+
+    .carousel__container{
+        white-space: nowrap;
+        margin: 30px 0;
+        padding-bottom: 10px;
+    }
+
+    .carousel__item{
+        width: 150px;
+        border-radius: 20px;
+        height: 200px;
+        background-color: tomato;
+        margin-right: 10px;
+        display: inline-block;
+        cursor: pointer;
+        transition: 450ms all;
+        transform-origin: center left;
+    }
+    .carousel__item:hover ~ .carousel__item{
+        transform: translate3d(100px ,0 ,0);
+    }
+
+    .carousel__container:hover .carousel__item{
+        opacity: 0.3;
+    }
+    .carousel__container:hover .carousel__item:hover{
+        transform: scale(1.5);
+        opacity: 1;
+    }
+
+    
+
+</style>
+<body>
+    <header class="header">
+        <img class="header__img" src="icons8-logo-30.png" alt="carro">
+        <div class= "header__menu">
+            <div class="header__menu--profile">
+                <img src="icons8-user-30.png" alt="user">
+                <p>Perfil</p>
+            </div>
+            <ul>
+                <li><a href="/">Cuenta</a></li>
+                <li><a href="/">Cerrar secion</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <section class="main">
+        <h2 class="main__title">Que quieres ver hoy?</h2>
+        <input class="input" type="text" placeholder="Buscar...">
+    </section>
+
+    <section class="carousel">
+        <div class="carousel__container">
+            <div class="carousel__item">
+
+            </div>
+
+            <div class="carousel__item">
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>
