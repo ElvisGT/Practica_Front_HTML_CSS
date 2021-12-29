@@ -114,38 +114,56 @@
         padding-bottom: 10px;
     }
 
-    .carousel__item{
+    .carousel-item{
         width: 150px;
         border-radius: 20px;
-        height: 200px;
+        height: 180px;
         background-color: tomato;
         margin-right: 10px;
         display: inline-block;
         cursor: pointer;
         transition: 450ms all;
         transform-origin: center left;
+        position: relative;
     }
-    .carousel__item:hover ~ .carousel__item{
+    .carousel-item:hover ~ .carousel-item{
         transform: translate3d(100px ,0 ,0);
     }
 
-    .carousel__container:hover .carousel__item{
+    .carousel__container:hover .carousel-item{
         opacity: 0.3;
     }
-    .carousel__container:hover .carousel__item:hover{
+    .carousel__container:hover .carousel-item:hover{
         transform: scale(1.5);
         opacity: 1;
     }
 
+    .carousel-item__img{
+        width: 150px;
+        height: 180px;
+        object-fit: cover;
+    }
+    .carousel-item__details{
+        background: linear-gradient(to top,rgba(0,0,0,0.9) 0% ,rgba(0,0,0,0)100%);
+        font-size: 10px;
+        opacity: 0;
+        transition: 450ms opacity;
+        padding: 10px;
+        position: absolute;
+        top:0;
+        left:0;
+        right: 0;
+        bottom: 0;
+    }
     
 
 </style>
 <body>
     <header class="header">
-        <img class="header__img" src="icons8-logo-30.png" alt="carro">
+        <img class="header__img" src="imagenes/icons8-logo-30.png" alt="carro">
         <div class= "header__menu">
             <div class="header__menu--profile">
-                <img src="icons8-user-30.png" alt="user">
+                <img src="imagenes/icons8-user-30.png" alt="user">
                 <p>Perfil</p>
             </div>
             <ul>
@@ -162,12 +180,21 @@
 
     <section class="carousel">
         <div class="carousel__container">
-            <div class="carousel__item">
-
+            <div class="carousel-item">
+                <img class= "carousel-item__img"src="https://images.pexels.com/photos/4944956/pexels-photo-4944956.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="people">
+                <div class="carousel-item__details">
+                    <div>
+                        <img src="https://img.icons8.com/flat-round/64/000000/play--v1.png" alt="Play">
+                        <img src="https://img.icons8.com/fluency/48/000000/plus.png" alt="Plus">
+                    </div>
+                    <p class="carousel-item__details--title">T&iacute;tulo descriptivo</p>
+                    <p class="carousel-item__details--subtitle">2019 16+ 114 minutos</p>
+                </div>
+                
             </div>
 
-            <div class="carousel__item">
-
+            <div class="carousel-item">
+                <img src="" alt="">
             </div>
         </div>
     </section>
