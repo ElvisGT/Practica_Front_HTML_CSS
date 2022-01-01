@@ -188,6 +188,7 @@ body {
     left:5%;
     bottom: 0;
     right: 0;
+    width: 100%;
 }
 .carousel-item__details--subtitle{
     color: white;
@@ -196,4 +197,26 @@ body {
     left:5%;
     bottom: 0;
     right: 0;
+    width: 100%;
+}
+@media only screen and (max-width:600px){
+    .carousel__container{
+        width: 100%;
+        padding: 0;
+        
+    }
+
+    .carousel-item{
+        width: 100px;
+        height: 120px;
+    }
+    
+    .carousel-item__details--title{
+        font-size: 7px;
+    }
+
+    .carousel-item__details--subtitle{
+        font-size: 7px;
+    }
+    
 }
